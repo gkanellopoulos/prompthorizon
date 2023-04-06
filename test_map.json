@@ -1,0 +1,12 @@
+{
+  "keys": {
+    "name": "k1",
+    "age": "k2",
+    "city": "k3"
+  },
+  "values": {
+    "John": "v1",
+    "30": "v2",
+    "New York": "v3"
+  }
+}

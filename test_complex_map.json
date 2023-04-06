@@ -1,0 +1,31 @@
+{
+  "keys": {
+    "person": "k1",
+    "name": "k2",
+    "age": "k3",
+    "city": "k4",
+    "contact": "k5",
+    "email": "k6",
+    "phone": "k7",
+    "address": "k8",
+    "street": "k9",
+    "zipcode": "k10",
+    "country": "k11",
+    "siblings": "k12"
+  },
+  "values": {
+    "John": "v1",
+    "30": "v2",
+    "New York": "v3",
+    "john@example.com": "v4",
+    "555-555-5555": "v5",
+    "123 Main St": "v6",
+    "10001": "v7",
+    "USA": "v8",
+    "Jane": "v9",
+    "28": "v10",
+    "Jim": "v11",
+    "32": "v12",
+    "Los Angeles": "v13"
+  }
+}
