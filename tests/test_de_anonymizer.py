@@ -2,8 +2,8 @@ import os
 import json
 import unittest
 import tempfile
-from prompthorizon.de_anonymizer import de_anonymize
-from prompthorizon.anonymizer import anonymize, save_map
+from prompt_horizon.de_anonymizer import de_anonymize
+from prompt_horizon.anonymizer import anonymize, save_map
 
 class TestDeAnonymizer(unittest.TestCase):
     def test_de_anonymize(self):

@@ -1,9 +1,17 @@
+import os
 from setuptools import setup, find_packages
 
+def read_file(filename):
+    with open(os.path.join(os.path.dirname(__file__), filename), encoding='utf-8') as f:
+        return f.read()
+
+
 setup(
-    name='prompthorizon',
-    version='0.1.0',
+    name='prompt-horizon',
+    version='0.1.1',
     description='Library to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore afterwards',
+    long_description=read_file('README.md'),
+    long_description_content_type='text/markdown',
     author='George Kanellopoulos',
     author_email='george@gkanellopoulos.com',
     url='https://github.com/gkanellopoulos/prompthorizon.git',

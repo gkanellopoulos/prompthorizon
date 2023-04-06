@@ -2,7 +2,7 @@ import tempfile
 import os
 import json
 import unittest
-from prompthorizon.anonymizer import anonymize
+from prompt_horizon.anonymizer import anonymize
 
 
 class TestAnonymizer(unittest.TestCase):

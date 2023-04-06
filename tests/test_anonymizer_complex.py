@@ -1,6 +1,6 @@
 import unittest
-from prompthorizon.anonymizer import anonymize, save_map
-from prompthorizon.de_anonymizer import de_anonymize
+from prompt_horizon.anonymizer import anonymize, save_map
+from prompt_horizon.de_anonymizer import de_anonymize
 
 class TestAnonymizerComplex(unittest.TestCase):
     def test_anonymize_complex(self):
