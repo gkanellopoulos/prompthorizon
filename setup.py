@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='prompthorizon',
     version='0.1.0',
-    description='A library for anonymizing and de-anonymizing JSON data',
+    description='Library to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore afterwards',
     author='George Kanellopoulos',
     author_email='george@gkanellopoulos.com',
     url='https://github.com/gkanellopoulos/prompthorizon.git',
