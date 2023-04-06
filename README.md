@@ -1,4 +1,4 @@
-# PromptHorizon
+# Prompt Horizon
 
 **Prompt Horizon** is a Python library that enables developers to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore the original JSON data. The purpose of this library is to facilitate data sharing while preserving privacy and allowing for the de-anonymization of the data when required.
 
