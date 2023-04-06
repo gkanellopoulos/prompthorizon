@@ -22,3 +22,7 @@ venv/
 
 # Sphinx documentation build
 docs/_build/
+
+#test files
+test_complex_map.json
+test_map.json
