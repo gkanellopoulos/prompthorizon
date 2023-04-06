@@ -9,6 +9,10 @@ def de_anonymize(anonymized_object, map_object=None, map_file_path=None, output_
     if not map_object:
         raise ValueError("A map_object or map_file_path must be provided.")
         
+    if isinstance(anonymized_object, str):
+        with open(anonymized_object, 'r') as f:
+            anonymized_object = json.load(f)
+
     keys_map = map_object["keys"]
     values_map = map_object["values"]
 

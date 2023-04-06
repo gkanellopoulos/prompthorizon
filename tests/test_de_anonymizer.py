@@ -54,5 +54,23 @@ class TestDeAnonymizer(unittest.TestCase):
         # Clean up the temporary file
         os.remove(temp_output_file_path)
 
+    def test_de_anonymize_with_anonymized_file_input(self):
+        input_json = {"name": "John", "age": 30, "city": "New York"}
+        expected_deanonymized_json = {"name": "John", "age": 30, "city": "New York"}
+
+        anonymized_json, map_object = anonymize(input_json)
+
+        # Create a temporary anonymized file
+        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix=".json") as temp_file:
+            json.dump(anonymized_json, temp_file)
+            temp_anonymized_file_path = temp_file.name
+
+        deanonymized_json = de_anonymize(temp_anonymized_file_path, map_object=map_object)
+
+        self.assertEqual(deanonymized_json, expected_deanonymized_json)
+
+        # Clean up the temporary file
+        os.remove(temp_anonymized_file_path)
+
 if __name__ == '__main__':
     unittest.main()
