@@ -60,10 +60,10 @@ Anonymized JSON:
 #### input and output file handling is supported
 
 ```python
-from prompt_horizon import anonymize_from_file
+from prompt_horizon import anonymize
 
 #This line will read the JSON data from "input.json", anonymize it, and save the anonymized JSON to "anonymized.json".
-anonymized_json, map_object = anonymize_from_file("input.json", output_file_path="anonymized.json")
+anonymized_json, map_object = anonymize("input.json", output_file_path="anonymized.json")
 ```
 
 <br>
@@ -82,10 +82,10 @@ deanonymized_json = de_anonymize(anonymized_json, map_object=map_object)
 #### input and output files are supported
 
 ```python
-from prompt_horizon import de_anonymize_from_file
+from prompt_horizon import de_anonymize
 
 #This will read the anonymized JSON data from "anonymized.json", the mapping object from "map_file.json", de-anonymize the JSON data, and save the de-anonymized JSON to "deanonymized.json".
-deanonymized_json = de_anonymize_from_file("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
+deanonymized_json = de_anonymize("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
 ```
 
 
@@ -94,25 +94,6 @@ deanonymized_json = de_anonymize_from_file("anonymized.json", map_file_path="map
 
 ### Saving and loading the map
 
-<br>
-
-You can also save the generated mapping object to a file and load it later for de-anonymization.
-
-```python
-from prompt_horizon import save_map, load_map
-
-# Save the map object to a file
-save_map(map_object, "map_file.json")
-
-# Load the map object from a file
-loaded_map_object = load_map("map_file.json")
-```
-
-Then, use the loaded map object to de-anonymize the JSON data:
-
-```python
-deanonymized_json = de_anonymize(anonymized_json, map_object=loaded_map_object)
-```
 <br>
 
 ## License
