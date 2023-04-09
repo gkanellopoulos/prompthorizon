@@ -78,6 +78,19 @@ class TestAnonymizer(unittest.TestCase):
 
             self.assertEqual(anonymized_json, loaded_anonymized_json)
 
+    def test_anonymize_no_key_anonymization(self):
+        input_json = {"name": "John", "age": 30, "city": "New York"}
+        expected_anonymized_json = {"name": "v1", "age": "v2", "city": "v3"}
+        expected_map_object = {
+            "keys": {},
+            "values": {"John": "v1", "30": "v2", "New York": "v3"}
+        }
+
+        anonymized_json, map_object = anonymize(input_json, anonymize_keys=False)
+
+        self.assertEqual(anonymized_json, expected_anonymized_json)
+        self.assertEqual(map_object, expected_map_object)
+
 
 if __name__ == '__main__':
     unittest.main()

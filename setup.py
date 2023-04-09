@@ -8,7 +8,7 @@ def read_file(filename):
 
 setup(
     name='prompt-horizon',
-    version='0.1.2',
+    version='0.1.3',
     description='Library to anonymize JSON objects by creating placeholders for keys and values, while generating a reversible mapping to restore afterwards',
     long_description=read_file('README.md'),
     long_description_content_type='text/markdown',

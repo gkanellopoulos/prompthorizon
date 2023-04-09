@@ -1,7 +1,7 @@
 import json
 from collections.abc import MutableMapping
 
-def anonymize(json_input, map_file_path=None, anonymized_file_path=None):
+def anonymize(json_input, map_file_path=None, anonymized_file_path=None, anonymize_keys=True):
     key_counter = 1
     value_counter = 1
     keys_map = {}
@@ -19,11 +19,11 @@ def anonymize(json_input, map_file_path=None, anonymized_file_path=None):
         if isinstance(obj, dict):
             anonymized_dict = {}
             for key, value in obj.items():
-                if key not in keys_map:
+                if anonymize_keys and key not in keys_map:
                     keys_map[key] = f"k{key_counter}"
                     key_counter += 1
 
-                anon_key = keys_map[key]
+                anon_key = keys_map.get(key, key) if anonymize_keys else key
                 anon_value = anonymize_recursive(value)
 
                 anonymized_dict[anon_key] = anon_value

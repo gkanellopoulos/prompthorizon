@@ -20,7 +20,13 @@ def de_anonymize(anonymized_object, map_object=None, map_file_path=None, output_
         if isinstance(obj, dict):
             de_anonymized_dict = {}
             for key, value in obj.items():
-                orig_key = [k for k, v in keys_map.items() if v == key][0]
+                orig_key = None
+                
+                if keys_map:  # Check if keys_map is populated
+                    orig_key = [k for k, v in keys_map.items() if v == key][0]
+                else:
+                    orig_key = key
+
                 orig_value = de_anonymize_recursive(value)
 
                 de_anonymized_dict[orig_key] = orig_value

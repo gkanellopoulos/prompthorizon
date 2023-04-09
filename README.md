@@ -68,6 +68,17 @@ anonymized_json, map_object = anonymize("input.json", output_file_path="anonymiz
 
 <br>
 
+#### anonymize only the values
+
+```python
+from prompt_horizon import anonymize
+
+#This line will read the JSON data from "input.json" and anonymize only the values.
+anonymized_json, map_object = anonymize("input.json", anonymize_keys=False)
+```
+
+<br>
+
 ### De-anonymize JSON
 
 <br>
