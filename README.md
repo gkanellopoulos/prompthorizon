@@ -99,14 +99,6 @@ from prompt_horizon import de_anonymize
 deanonymized_json = de_anonymize("anonymized.json", map_file_path="map_file.json", output_file_path="deanonymized.json")
 ```
 
-
-
-<br>
-
-### Saving and loading the map
-
-<br>
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
